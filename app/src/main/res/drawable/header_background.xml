@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Header background: deep blue → slightly lighter blue diagonal gradient
+    giving a modern, polished look without being garish.
+    Place in res/drawable/header_background.xml
+-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <gradient
+        android:type="linear"
+        android:angle="135"
+        android:startColor="#0D47A1"
+        android:centerColor="#1565C0"
+        android:endColor="#1976D2" />
+
+</shape>

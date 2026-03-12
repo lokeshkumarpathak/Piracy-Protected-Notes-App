@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#212121">
+
+    <!-- Full-screen RecyclerView for PDF pages -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_pages"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical" />
+
+    <!-- Page indicator overlay at top -->
+    <TextView
+        android:id="@+id/tv_page_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center_horizontal"
+        android:layout_marginTop="12dp"
+        android:background="#99000000"
+        android:textColor="#FFFFFF"
+        android:textSize="13sp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:text="Page 1 / 1" />
+
+    <!-- Loading spinner -->
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:indeterminateTint="#FFFFFF"
+        android:visibility="visible" />
+
+    <!-- FAB column — bottom right, stacked vertically -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:orientation="vertical"
+        android:layout_margin="16dp">
+
+        <!-- AI Help FAB (top) -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_ai_help"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:contentDescription="AI Help"
+            app:srcCompat="@android:drawable/ic_menu_help"
+            app:backgroundTint="#1B5E20"
+            app:tint="#FFFFFF" />
+
+        <!-- Screenshot FAB (bottom) -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_screenshot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="Take Screenshot"
+            app:srcCompat="@android:drawable/ic_menu_camera"
+            app:backgroundTint="#1565C0"
+            app:tint="#FFFFFF" />
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<androidx.coordinatorlayout.widget.CoordinatorLayout-->
+<!--    xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:background="#212121">-->
+
+<!--    &lt;!&ndash; Full-screen RecyclerView for PDF pages &ndash;&gt;-->
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/recycler_pages"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:scrollbars="vertical" />-->
+
+<!--    &lt;!&ndash; Page indicator overlay at top &ndash;&gt;-->
+<!--    <TextView-->
+<!--        android:id="@+id/tv_page_indicator"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="top|center_horizontal"-->
+<!--        android:layout_marginTop="12dp"-->
+<!--        android:background="#99000000"-->
+<!--        android:textColor="#FFFFFF"-->
+<!--        android:textSize="13sp"-->
+<!--        android:paddingStart="12dp"-->
+<!--        android:paddingEnd="12dp"-->
+<!--        android:paddingTop="4dp"-->
+<!--        android:paddingBottom="4dp"-->
+<!--        android:text="Page 1 / 1" />-->
+
+<!--    &lt;!&ndash; Loading spinner shown while rendering first pages &ndash;&gt;-->
+<!--    <ProgressBar-->
+<!--        android:id="@+id/progress_bar"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:indeterminateTint="#FFFFFF"-->
+<!--        android:visibility="visible" />-->
+
+<!--    &lt;!&ndash; Screenshot FAB — bottom right &ndash;&gt;-->
+<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--        android:id="@+id/fab_screenshot"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="bottom|end"-->
+<!--        android:layout_margin="24dp"-->
+<!--        android:contentDescription="Take Screenshot"-->
+<!--        app:srcCompat="@android:drawable/ic_menu_camera"-->
+<!--        app:backgroundTint="#1565C0"-->
+<!--        app:tint="#FFFFFF" />-->
+
+<!--</androidx.coordinatorlayout.widget.CoordinatorLayout>-->

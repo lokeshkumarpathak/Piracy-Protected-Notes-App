@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Circular semi-transparent ripple for the back button.
+    Gives a modern "icon button" feel — touch feedback without a hard square border.
+    Place in res/drawable/header_back_btn_bg.xml
+-->
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="#33FFFFFF">
+
+    <!-- Clip the ripple to a circle -->
+    <item android:id="@android:id/mask">
+        <shape android:shape="oval">
+            <solid android:color="#FFFFFF" />
+        </shape>
+    </item>
+
+    <!-- Resting state: subtle circle so the button has a hit target hint -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#1AFFFFFF" />
+        </shape>
+    </item>
+
+</ripple>
